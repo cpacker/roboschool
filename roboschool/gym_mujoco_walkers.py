@@ -16,7 +16,7 @@ class RoboschoolHopper(RoboschoolForwardWalkerMujocoXML):
     def __init__(self):
         RoboschoolForwardWalkerMujocoXML.__init__(self, "hopper.xml", "torso", action_dim=3, obs_dim=15, power=0.75)
     def alive_bonus(self, z, pitch):
-        return +1 if z > 0.8 and abs(pitch) < 1.0 else -1
+        return +1 if z > 0.8 and abs(pitch) < 1.1 else -1
 
 class RoboschoolWalker2d(RoboschoolForwardWalkerMujocoXML):
     foot_list = ["foot", "foot_left"]
